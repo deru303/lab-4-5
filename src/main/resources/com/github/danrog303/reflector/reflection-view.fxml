@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+
+<?import com.github.danrog303.reflector.fx.VInputText?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.github.danrog303.reflector.ReflectionController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <HBox>
+        <TextField text="com.github.danrog303.reflector.models.Student" minWidth="400" fx:id="classNameInput" />
+        <Button onAction="#onCreateObject">Create object</Button>
+        <Button onAction="#onSaveObject">Save changes</Button>
+    </HBox>
+
+    <VBox fx:id="objectEditBox">
+        <VInputText />
+    </VBox>
+
+    <TextArea fx:id="logTextArea" editable="false" />
+</VBox>
